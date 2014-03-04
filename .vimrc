@@ -71,6 +71,7 @@ endfunction
   
 vmap <C-k> :call PyComment()<CR>
 vmap <C-j> :call PyUncomment()<CR>
+nnoremap K <Nop>
 
 
 colors elflord
