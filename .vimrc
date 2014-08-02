@@ -68,13 +68,15 @@ function! ReplaceBraces(startBrace, endBrace)
   let @c=a:endBrace
   normal "byibdab"ap"bp"cp
 endfunction
-  
+
 vmap <C-k> :call PyComment()<CR>
 vmap <C-j> :call PyUncomment()<CR>
-nnoremap K <Nop>
 
+nmap <C-c> :call search("[A-Z]", "", line("."))<CR>
+omap <C-c> :call search("[A-Z]", "", line("."))<CR>
+
+nmap K <Nop>
 
 colors elflord
 
 map <F1> <Nop>
-
