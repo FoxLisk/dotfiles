@@ -15,6 +15,8 @@ set ignorecase
 set smartcase
 set foldmethod=indent
 set ls=2
+set wrap
+set textwidth=80
 
 highlight ColorColumn ctermbg=DarkGray
 call matchadd('ColorColumn', '\%80v', 100)
@@ -67,6 +69,10 @@ function! ReplaceBraces(startBrace, endBrace)
   let @b=''
   let @c=a:endBrace
   normal "byibdab"ap"bp"cp
+endfunction
+
+function! EraseEndingWhitespace()
+    %s/\s\+$//
 endfunction
 
 vmap <C-k> :call PyComment()<CR>
