@@ -40,6 +40,11 @@ alias l=_ll #this gets overwritten by ZSH
 # Customize to your needs...
 export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 
+ADDONS_FILE="$HOME/.zshrc-addons"
+if [ -e $ADDONS_FILE ]; then
+  source $ADDONS_FILE
+fi
+
 
 stty -ixon
 ssh-add
